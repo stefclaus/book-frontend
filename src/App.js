@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 //import BooksContainer from './containers/BooksContainer'
-import fetchBooks from './actions/fetchBooks'
+import BooksContainer from './containers/BooksContainer'
 
 
 //check that call to API works
@@ -10,7 +10,7 @@ import fetchBooks from './actions/fetchBooks'
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.fetchBooks({type: 'FETCH_BOOKS', payload: {name: 'Cool'}})
+//    this.props.fetchBooks({type: 'FETCH_BOOKS', payload: {name: 'Cool'}})
 //    fetch('http://localhost:3000/api/v1/books')
 //    .then(response => response.json())
 //    .then(data => console.log(data))
@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-    Stef's app
+        <BooksContainer/>
       </div>
     );
   }
@@ -35,4 +35,4 @@ class App extends React.Component {
 
 //second argument gives us ability to dispatach new actions to our store from the component
 
-export default connect(null, {fetchBooks})(App);
+export default connect()(App);
