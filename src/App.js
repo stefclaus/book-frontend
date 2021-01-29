@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
 //import BooksContainer from './containers/BooksContainer'
 import BooksContainer from './containers/BooksContainer'
 
@@ -35,4 +34,4 @@ class App extends React.Component {
 
 //second argument gives us ability to dispatach new actions to our store from the component
 
-export default connect()(App);
+export default App;

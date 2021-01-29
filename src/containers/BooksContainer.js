@@ -1,17 +1,36 @@
 import React from 'react'
-
+import {connect} from 'react-redux'
+import {fetchBooks} from '../actions/fetchBooks'
+import Books from '../components/Books'
+import BookInput from '../components/BookInput'
 
 class BooksContainer extends React.Component {
 
+    componentDidMount(){
+    //  this.props.fetchBooks()
+    }
     render() {
 
       return (
 
-        <div>AccountsContainer</div>
+        <div>
+          <BookInput/>
+          <Books/>
+        </div>
       )
     }
 
 
 }
 
-export default BooksContainer
+const mapStateToProps = state => {
+  return {
+    books: state.books
+  }
+}
+
+//give this component access through props to  access to our statae
+
+export default connect(mapStateToProps, {fetchBooks})(BooksContainer)
+
+//to see, use mapStateToProps.
