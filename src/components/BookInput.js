@@ -6,7 +6,9 @@ class BookInput extends React.Component {
   render() {
     return (
       <div>
-      Book Input
+        <form>
+        
+        </form>
       </div>
     )
   }
