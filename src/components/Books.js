@@ -5,7 +5,7 @@ const Books = (props) => {
   console.log(props)
   return (
     <div>
-      {props.books.map(book => <li key={book.id}>{book.title} - {book.author} Link: {book.link} Genre: {book.genre}</li>  )}
+      {props.books.map(book => <li key={book.id}>{book.title} - {book.author} Link: {book.link} Genre: {book.genre} Average Stars: {book.average_stars}</li>  )}
     </div>
 
   )
