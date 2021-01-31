@@ -9,6 +9,5 @@ export function fetchBooks(){
         payload: books
       }))
 }
-//return action
 
 }

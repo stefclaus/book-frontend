@@ -7,7 +7,7 @@ import BookInput from '../components/BookInput'
 class BooksContainer extends React.Component {
 
     componentDidMount(){
-    //  this.props.fetchBooks()
+      this.props.fetchBooks()
     }
     render() {
 
@@ -15,7 +15,7 @@ class BooksContainer extends React.Component {
 
         <div>
           <BookInput/>
-          <Books/>
+          <Books books={this.props.books}/>
         </div>
       )
     }
