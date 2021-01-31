@@ -14,7 +14,7 @@ class BooksContainer extends React.Component {
       return (
 
         <div>
-          <BookInput/>
+          <BookInput/><br/><br/>
           <Books books={this.props.books}/>
         </div>
       )
