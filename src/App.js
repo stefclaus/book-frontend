@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import BooksContainer from './containers/BooksContainer'
 import BooksContainer from './containers/BooksContainer'
 
 

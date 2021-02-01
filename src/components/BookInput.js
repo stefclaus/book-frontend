@@ -31,7 +31,7 @@ class BookInput extends React.Component {
           <input type='text' placeholder='Genre' value={this.state.genre} name= "genre"onChange={this.handleChange}/><br></br>
           <label>Book Link:</label>
           <input type='text' placeholder='only if applicable' value={this.state.link} name= "link"onChange={this.handleChange}/><br></br>
-          <input type="submit"/>
+        <input type="submit"/>
         </form>
       </div>
     )
