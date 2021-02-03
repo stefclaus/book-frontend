@@ -1,12 +1,16 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
 
 const Book = (props) => {
+
   console.log(props)
+  let book = props.books[props.match.params.id - 1]
+//  let book = props.books.filter(books => book.id == props.match.params.id)[0]
+  console.log(book)
   return (
     <div>
-    <li> {props.book.title} - {props.book.author} Link: {props.book.link} Genre: {props.book.genre}  </li> 
-    </div>
-
+     {book ? book.title : null}
+   </div>
   )
 
 
