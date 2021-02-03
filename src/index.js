@@ -15,7 +15,9 @@ let store = createStore(bookReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+        <App />
+    </Router>
   </Provider>
   ,
   document.getElementById('root'));
