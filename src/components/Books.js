@@ -1,13 +1,13 @@
 import React from 'react'
-
+import Book from './Book'
 
 const Books = (props) => {
   console.log(props)
   return (
     <div>
-      {props.books.map(book => <li key={book.id}>{book.title} - {book.author} Link: {book.link} Genre: {book.genre} Average Stars: {book.average_stars}</li>  )}
+      {props.books.map(book =>
+        <div key={book.id}><Book book={book} /></div> )}
     </div>
-
   )
 
 }
