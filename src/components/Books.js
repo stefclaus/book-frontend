@@ -6,9 +6,9 @@ const Books = (props) => {
   return (
     <div>
       {props.books.map(book =>
-        <div key={book.id}>
-          <Link path={`/books/${book.id}`}>{book.author}</Link>
-        </div> )}
+        <li key={book.id}>
+          <Link to={`/books/${book.id}`}>{book.title}</Link>
+        </li> )}
     </div>
   )
 
