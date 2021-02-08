@@ -1,6 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
-
+import ReviewsContainer from "../containers/ReviewsContainer"
 
 const Book = (props) => {
 
@@ -9,10 +9,14 @@ const Book = (props) => {
   let book = props.books[props.match.params.id - 1]
 //  let book = props.books.filter(books => book.id == props.match.params.id)[0]
   return (
+    <div>
+
     <li>
-      
+
       {book ? book.title : null} - {book ? book.author : null} - {book ? book.genre : null}
     </li>
+  <ReviewsContainer/>
+  </div>
   )
 
 
