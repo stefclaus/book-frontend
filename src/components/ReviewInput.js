@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 class ReviewInput extends React.Component {
 
 //can hold the state in the redux store or here in your local state
-  state = {body: '', star_rating: '', likes: '', datetime: ''}
+  state = {body: '', star_rating: '5 stars', likes: '', datetime: ''}
 
 //without handle change, the text will be blank
   handleChange = (event) => {
@@ -15,11 +15,18 @@ class ReviewInput extends React.Component {
     })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addReview(this.state)
+    this.setState({
+      body: '', star_rating: '', likes: '', datetime: ''
+    })
+  }
 
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>Review:</label>
           <input type="text" name="body" value={this.state.body} onChange={this.handleChange}></input>
           <select name="star_rating" value={this.state.star_rating} onChange={this.handleChange}>
