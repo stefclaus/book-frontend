@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-//import {addReview} from '../actions/addReview'
+import {addReview} from '../actions/addReview'
 
 
 class ReviewInput extends React.Component {
@@ -17,9 +17,9 @@ class ReviewInput extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.addReview(this.state)
+    this.props.addReview(this.state, this.props.book.id)
     this.setState({
-      body: '', star_rating: '', likes: '', datetime: ''
+      body: '', star_rating: '5 stars', likes: '', datetime: ''
     })
   }
 
@@ -46,4 +46,4 @@ class ReviewInput extends React.Component {
 
 }
 
-export default connect(null)(ReviewInput)
+export default connect(null, {addReview})(ReviewInput)
