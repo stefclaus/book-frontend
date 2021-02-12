@@ -2,6 +2,11 @@ import React from 'react'
 
 const Reviews = (props) => {
 
+//state = {}
+
+  const handleDelete = () => {
+    
+  }
   return (
     <div>
       {props.reviews && props.reviews.map(review =>
@@ -10,6 +15,7 @@ const Reviews = (props) => {
            Review Date: {review.datetime} -
            Likes : {review.likes}
           Star Rating: {review.star_rating}
+          <button onClick={handleDelete}>Delete</button>
         </li>
       )}
     </div>
