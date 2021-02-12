@@ -2,7 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addReview} from '../actions/addReview'
 
-
 class ReviewInput extends React.Component {
 
 //can hold the state in the redux store or here in your local state
@@ -22,6 +21,7 @@ class ReviewInput extends React.Component {
       body: '', star_rating: '5 stars', likes: '', datetime: ''
     })
   }
+
 
   render() {
     return (
