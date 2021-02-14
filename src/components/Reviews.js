@@ -1,11 +1,12 @@
 import React from 'react'
-
+import {connect} from 'react-redux'
+import {deleteReview} from '../actions/deleteReview'
 const Reviews = (props) => {
 
 //state = {}
 
-  const handleDelete = () => {
-    
+   const handleDelete = (review) => {
+    props.deleteReview(review.id, review.book_id)
   }
   return (
     <div>
@@ -15,7 +16,7 @@ const Reviews = (props) => {
            Review Date: {review.datetime} -
            Likes : {review.likes}
           Star Rating: {review.star_rating}
-          <button onClick={handleDelete}>Delete</button>
+          <button onClick={(event, review) => handleDelete(event, review)}>Delete</button>
         </li>
       )}
     </div>
@@ -23,4 +24,4 @@ const Reviews = (props) => {
 
 }
 
-export default Reviews
+export default connect(null, {deleteReview})(Reviews)

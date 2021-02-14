@@ -15,15 +15,15 @@ export default function bookReducer(state = {books: []}, action ) {
       })
       return {...state, books: books}
     //  return {...state, reviews: reviews}
-    case 'DELETE_REVIEW'
-    let books = state.books.map(book => {
+    case 'DELETE_REVIEW':
+    let delete_books = state.books.map(book => {
       if (book.id === action.payload.id) {
         return action.payload
       } else {
         return book
       }
     })
-    return {...state, books: books}
+    return {...state, books: delete_books}
       default:
         return state
   }
