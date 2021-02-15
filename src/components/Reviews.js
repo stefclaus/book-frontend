@@ -16,7 +16,7 @@ const Reviews = (props) => {
            Review Date: {review.datetime} -
            Likes : {review.likes}
           Star Rating: {review.star_rating}
-          <button onClick={(event, review) => handleDelete(event, review)}>Delete</button>
+          <button onClick={() => handleDelete(review)}>Delete</button>
         </li>
       )}
     </div>
