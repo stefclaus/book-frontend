@@ -1,3 +1,4 @@
+//can group the cases into one case
 
 export default function bookReducer(state = {books: []}, action ) {
   switch (action.type) {
@@ -24,6 +25,17 @@ export default function bookReducer(state = {books: []}, action ) {
       }
     })
     return {...state, books: delete_books}
+
+    case 'EDIT_BOOK':
+    let edit_books = state.books.map(book => {
+      if (book.id === action.payload.id) {
+        return action.payload
+      } else {
+        return book
+      }
+    })
+
+    return {...state, books: edit_books}
       default:
         return state
   }
