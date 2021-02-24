@@ -14,10 +14,10 @@ const Book = (props) => {
   return (
     <div>
 
-    <li>
+  
 
       {book ? book.title : null} - {book ? book.author : null} - {book ? book.genre : null}
-    </li>
+
   <ReviewsContainer book={book}/>
   <BookEdit book={book}/>
   </div>

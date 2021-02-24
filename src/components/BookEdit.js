@@ -26,8 +26,7 @@ class BookEdit extends React.Component {
   render() {
     return (
       <div>
-        <br>
-        </br>
+        <br></br><br></br><br></br>
         Edit book info:
         <form onSubmit={this.handleSubmit}>
           <label>Book or Article Title:</label>

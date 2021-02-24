@@ -27,7 +27,8 @@ class ReviewInput extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Review:</label>
+          <br></br><br></br><br></br>
+          <label>Your Review:</label>
           <input type="text" name="body" value={this.state.body} onChange={this.handleChange}></input>
           <select name="star_rating" value={this.state.star_rating} onChange={this.handleChange}>
             <option>1 star</option>

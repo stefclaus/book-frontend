@@ -13,8 +13,7 @@ const Reviews = (props) => {
       {props.reviews && props.reviews.map(review =>
         <li key={review.id}>
           {review.body} -
-           Review Date: {review.datetime} -
-           Likes : {review.likes}
+           Review
           Star Rating: {review.star_rating}
           <button onClick={() => handleDelete(review)}>Delete</button>
         </li>
