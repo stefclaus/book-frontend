@@ -26,6 +26,9 @@ class BookEdit extends React.Component {
   render() {
     return (
       <div>
+        <br>
+        </br>
+        Edit book info:
         <form onSubmit={this.handleSubmit}>
           <label>Book or Article Title:</label>
           <input type='text' placeholder='Title' value={this.state.title} name= "title" onChange={this.handleChange}/><br></br>
@@ -33,13 +36,17 @@ class BookEdit extends React.Component {
           <input type='text' placeholder='Author'value={this.state.author} name= "author"onChange={this.handleChange}/><br></br>
           <label>Book Genre:</label>
           <input type='text' placeholder='Genre' value={this.state.genre} name= "genre"onChange={this.handleChange}/><br></br>
-          <label>Book Link:</label>
+          <label>Link To Indie Publisher:</label>
           <input type='text' placeholder='only if applicable' value={this.state.link} name= "link"onChange={this.handleChange}/><br></br>
         <input type="submit"/>
         </form>
       </div>
     )
   }
+}
+
+BookEdit.defaultProps = {
+  books: {}
 }
 
 //using {addBook} is alternative to using mapdispatchtoprops. This is using thunk (Middleware)

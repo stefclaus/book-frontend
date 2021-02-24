@@ -13,7 +13,7 @@ export const addReview = (review, bookId) => {
         if (book.error) {
           alert(book.error)
         } else {
-          dispatch({type: 'ADD_REVIEW', payload: review})
+          dispatch({type: 'ADD_REVIEW', payload: book})
         }
       }
     )
