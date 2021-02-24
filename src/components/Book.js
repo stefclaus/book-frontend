@@ -3,6 +3,7 @@ import {Redirect} from 'react-router-dom'
 import ReviewsContainer from "../containers/ReviewsContainer"
 import BookEdit from "./BookEdit"
 
+
 const Book = (props) => {
 
   console.log(props)
@@ -14,9 +15,11 @@ const Book = (props) => {
   return (
     <div>
 
-  
+        {book ? book.title : null} - {book ? book.author : null} - {book ? book.genre : null}
 
-      {book ? book.title : null} - {book ? book.author : null} - {book ? book.genre : null}
+    
+
+
 
   <ReviewsContainer book={book}/>
   <BookEdit book={book}/>

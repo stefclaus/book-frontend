@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import BooksContainer from './containers/BooksContainer'
 
 
-//check that call to API works
-
 //fetch result is by default a get request
 class App extends React.Component {
 
