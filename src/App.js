@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import BooksContainer from './containers/BooksContainer'
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { NavigationBar } from './components/NavigationBar';
 
 //fetch result is by default a get request
 class App extends React.Component {
@@ -15,7 +17,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BooksContainer/>
+        <React.Fragment>
+  <Router>
+    <NavigationBar />
+    <BooksContainer />
+  </Router>
+</React.Fragment>
+
       </div>
     );
   }
