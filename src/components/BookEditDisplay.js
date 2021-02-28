@@ -5,22 +5,15 @@ import BookEdit from "./BookEdit"
 import {Route, Link} from 'react-router-dom'
 
 const Book = (props) => {
-
   console.log(props)
-    let book = props.books.filter(book => book.id == props.match.params.id)[0]
+  let book = props.books.filter(book => book.id == props.match.params.id)[0]
     //conditional render is on this page!!!!!
-
   return (
     <div>
-        <a target="_blank" href={book ? book.link: null}>{book ? book.title: null}</a> {book ? book.author : null} - {book ? book.genre : null}
-
-  <BookEdit book={book}/>
-
+    {book ? book.title: null} {book ? book.author : null} - {book ? book.genre : null}
   </div>
+  <BookEdit book={book}/>
   )
-
-
 }
-
 
 export default Book
