@@ -2,6 +2,7 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 import ReviewsContainer from "../containers/ReviewsContainer"
 import BookEdit from "./BookEdit"
+
 import {Route, Link} from 'react-router-dom'
 
 const Book = (props) => {

@@ -16,7 +16,7 @@ const Book = (props) => {
         <a target="_blank" href={book ? book.link: null}>{book ? book.title: null}</a> {book ? book.author : null} - {book ? book.genre : null}
 
   <ReviewsContainer book={book}/>
-
+  
   </div>
   )
 
