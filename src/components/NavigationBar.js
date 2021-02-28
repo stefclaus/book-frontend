@@ -2,14 +2,14 @@ import React from 'react';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 import styled from 'styled-components';
 const Styles = styled.div`
-  .navbar { background-color: #222; }
+  .navbar { background-color: #8F3A84; }
   a, .navbar-nav, .navbar-light .nav-link {
-    color: #9FFFCB;
+    color: #222;
     &:hover { color: white; }
   }
   .navbar-brand {
     font-size: 1.4em;
-    color: #9FFFCB;
+    color: #222;
     &:hover { color: white; }
   }
   .form-center {
