@@ -11,14 +11,15 @@ const Books = (props) => {
   const handleEdit = (book) => {
    props.editBook(book.id)
   }
+
   return (
     <div>
       <br></br>
       Book reviews:
       {props.books.map(book =>
         <li key={book.id}>
-          <Link to={`/books/${book.id}`}>{book.title}</Link>
-            <button onClick={() => handleEdit(book)}>Edit book info</button>
+          <Link to={`/books/${book.id}`}>{book.title}  </Link>
+            <Link to={`/books/${book.id}/edit`} onClick={() => handleEdit(book)}>Edit book info</Link>
         </li> )}
     </div>
   )
