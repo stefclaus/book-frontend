@@ -22,6 +22,8 @@ export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
       <Navbar.Brand href="/books">Book Review</Navbar.Brand>
+      <Nav.Item>Track your favorite reivews, and then review books yourself</Nav.Item>
+
       <Nav.Item><Nav.Link href="/books/new">Add A New Book</Nav.Link></Nav.Item>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
