@@ -5,6 +5,7 @@ import {fetchBooks} from '../actions/fetchBooks'
 import Books from '../components/Books'
 import Book from '../components/Book'
 import BookInput from '../components/BookInput'
+import About from '../components/About'
 
 class BooksContainer extends React.Component {
 
@@ -17,7 +18,7 @@ class BooksContainer extends React.Component {
       return (
         <div>
               <Switch>
-
+              <Route path='/about' component={About}/>
               <Route path='/books/new' component={BookInput}/>
               <Route path='/books/:id' render={(routerProps) => <Book {...routerProps} books={this.props.books}/>}/>
               <Route path='/books' render={(routerProps) => <Books {...routerProps} books={this.props.books}/>}/>
