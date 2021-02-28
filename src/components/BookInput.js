@@ -4,6 +4,7 @@ import {addBook} from '../actions/addBook'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Toast from 'react-bootstrap/Toast';
+import { withRouter } from 'react-router';
 
 class BookInput extends React.Component {
 
@@ -24,9 +25,12 @@ class BookInput extends React.Component {
     this.setState({
       title: '', genre: '', author: '', link: ''
     })
+    this.props.history.push('/books');
+
   }
 
   render() {
+
     return (
       <div>
 <h1 className="header">Add a book</h1>
