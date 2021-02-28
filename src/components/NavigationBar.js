@@ -12,6 +12,10 @@ const Styles = styled.div`
     color: #222;
     &:hover { color: white; }
   }
+  .navbar-detail {
+    font-size: .5em;
+    color: white;
+  }
   .form-center {
     position: absolute !important;
     left: 25%;
@@ -22,15 +26,14 @@ export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
       <Navbar.Brand href="/books">Book Review</Navbar.Brand>
-      <Nav.Item>Track your favorite reivews, and then review books yourself</Nav.Item>
-
       <Nav.Item><Nav.Link href="/books/new">Add A New Book</Nav.Link></Nav.Item>
+      <Nav.Item>Track your favorite reivews, and then review books yourself!</Nav.Item>
+
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item><Nav.Link href="/books">Home</Nav.Link></Nav.Item>
           <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
-
         </Nav>
       </Navbar.Collapse>
     </Navbar>

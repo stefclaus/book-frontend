@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {deleteReview} from '../actions/deleteReview'
+
 const Reviews = (props) => {
 
 //state = {}
