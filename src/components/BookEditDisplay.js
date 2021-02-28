@@ -4,7 +4,6 @@ import ReviewsContainer from "../containers/ReviewsContainer"
 import BookEdit from "./BookEdit"
 import {Route, Link} from 'react-router-dom'
 
-
 const Book = (props) => {
 
   console.log(props)
@@ -15,12 +14,13 @@ const Book = (props) => {
     <div>
         <a target="_blank" href={book ? book.link: null}>{book ? book.title: null}</a> {book ? book.author : null} - {book ? book.genre : null}
 
-  <ReviewsContainer book={book}/>
+  <BookEdit book={book}/>
 
   </div>
   )
 
 
 }
+
 
 export default Book
