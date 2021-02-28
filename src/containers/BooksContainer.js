@@ -6,6 +6,7 @@ import Books from '../components/Books'
 import Book from '../components/Book'
 import BookInput from '../components/BookInput'
 import BookEdit from '../components/BookEdit'
+import BookEditDisplay from '../components/BookEditDisplay'
 
 import About from '../components/About'
 

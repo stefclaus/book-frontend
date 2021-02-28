@@ -11,8 +11,9 @@ const Book = (props) => {
   return (
     <div>
     {book ? book.title: null} {book ? book.author : null} - {book ? book.genre : null}
+    <BookEdit book={book}/>
   </div>
-  <BookEdit book={book}/>
+
   )
 }
 
