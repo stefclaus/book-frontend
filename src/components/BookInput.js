@@ -9,11 +9,9 @@ import { withRouter } from 'react-router';
 class BookInput extends React.Component {
 
 
-  //can be constructor or can use state=
 
   state = {title: '', genre: '', author: '', link: ''}
 
-  //without handleChange, nothing will happen when you type in text
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -54,6 +52,5 @@ class BookInput extends React.Component {
   }
 }
 
-//using {addBook} is alternative to using mapdispatchtoprops. This is using thunk (Middleware)
 
 export default connect(null, {addBook})(BookInput)

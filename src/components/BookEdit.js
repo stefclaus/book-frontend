@@ -7,7 +7,6 @@ class BookEdit extends React.Component {
 
   state = {title: '', genre: '', author: '', link: ''}
 
-  //without handleChange, nothing will happen when you type in text
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -48,6 +47,5 @@ BookEdit.defaultProps = {
   books: {}
 }
 
-//using {addBook} is alternative to using mapdispatchtoprops. This is using thunk (Middleware)
 
 export default connect(null, {editBook})(BookEdit)

@@ -1,4 +1,3 @@
-//can group the cases into one case
 
 export default function bookReducer(state = {books: []}, action ) {
   switch (action.type) {
@@ -15,7 +14,6 @@ export default function bookReducer(state = {books: []}, action ) {
         }
       })
       return {...state, books: books}
-    //  return {...state, reviews: reviews}
     case 'DELETE_REVIEW':
     let delete_books = state.books.map(book => {
       if (book.id === action.payload.id) {

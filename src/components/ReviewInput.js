@@ -4,10 +4,8 @@ import {addReview} from '../actions/addReview'
 
 class ReviewInput extends React.Component {
 
-//can hold the state in the redux store or here in your local state
   state = {body: '', star_rating: '5 stars', likes: '', datetime: ''}
 
-//without handle change, the text will be blank
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value

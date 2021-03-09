@@ -4,7 +4,6 @@ import {deleteReview} from '../actions/deleteReview'
 
 const Reviews = (props) => {
 
-//state = {}
 
    const handleDelete = (review) => {
     props.deleteReview(review.id, review.book_id)

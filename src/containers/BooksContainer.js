@@ -40,8 +40,5 @@ const mapStateToProps = state => {
   }
 }
 
-//give this component access through props to  access to our statae
 
 export default connect(mapStateToProps, {fetchBooks})(BooksContainer)
-
-//to see, use mapStateToProps.

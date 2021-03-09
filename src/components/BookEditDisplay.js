@@ -8,7 +8,6 @@ import {Route, Link} from 'react-router-dom'
 const Book = (props) => {
   console.log(props)
   let book = props.books.filter(book => book.id == props.match.params.id)[0]
-    //conditional render is on this page!!!!!
   return (
     <div>
     {book ? book.title: null} {book ? book.author : null} - {book ? book.genre : null}
