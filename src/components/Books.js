@@ -15,12 +15,12 @@ const Books = (props) => {
   return (
     <div>
       <br></br>
-        Welcome to Book Review! We welcome you to enter book reviews that you see here. Then you can
-        add your own reviews our thoughts.
+        Welcome to Book Review! <br></br><br></br>
+      We welcome you to enter book reviews that you see from major publishers here. This app allows you to add your own reviews our thoughts.
       <br></br>
       <br></br>
       <br></br>
-      
+
       Book reviews:
       {props.books.map(book =>
         <li key={book.id}>

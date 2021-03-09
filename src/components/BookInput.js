@@ -8,6 +8,7 @@ import { withRouter } from 'react-router';
 
 class BookInput extends React.Component {
 
+
   //can be constructor or can use state=
 
   state = {title: '', genre: '', author: '', link: ''}
@@ -33,7 +34,7 @@ class BookInput extends React.Component {
 
     return (
       <div>
-<h1 className="header">Add a book</h1>
+<h1 className="header" style={{padding: "10px"}}>Add a book</h1>
 
         <form onSubmit={this.handleSubmit}>
 
