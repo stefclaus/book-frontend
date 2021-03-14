@@ -1,5 +1,4 @@
 export const addReview = (review, bookId) => {
-
   return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/books/${bookId}/reviews`, {
       method: 'POST',
@@ -17,5 +16,6 @@ export const addReview = (review, bookId) => {
         }
       }
     )
+
   }
 }

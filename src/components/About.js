@@ -1,11 +1,10 @@
 import React from 'react'
 import {Route, Link} from 'react-router-dom'
-import './App.css';
 
 
 const About = () => {
   return (
-    <div>
+    <div >
       <br></br><br></br>
       This is the Flatiron school final project for Stef Claus, a full stack web developer living in Washington, DC.
       <br></br><br></br>
